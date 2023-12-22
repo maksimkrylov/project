@@ -23,7 +23,7 @@ function runInteractiveConsole() {
   process.stdin.on('keypress', (ch, key) => {
     if (key) {
       // Вызывает команду, соответствующую нажатой кнопке.
-      if (key.name in keyboard) {
+      if (key.q in keyboard) {
         keyboard[key.name]();
       }
       // Прерывание программы.

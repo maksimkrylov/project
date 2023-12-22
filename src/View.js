@@ -2,7 +2,7 @@
 const game = require ('../run')
 class View {
   render(track) {
-    const yourTeamName = 'Elbrus';
+    const yourTeamName = 'Стражи света';
 
     // Тут всё рисуем.
     console.clear();

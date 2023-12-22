@@ -5,19 +5,10 @@
 class Boomerang {
   constructor() {
     this.skin = '🌀';
-    this.position = 0;
+    this.position = 3;
   }
 
-  fly() {
-
-    // if (this.position === game.enemy.position) {
-    //   game.enemy.die()
-    //   this.moveLeft();
-
-    // }
-    this.moveRight();
-    
-  }
+  
 
   moveLeft() {
     // Идём влево.
@@ -28,6 +19,15 @@ class Boomerang {
     // Идём вправо.
     this.position += 1;
   }
+  fly() {
+
+    
+      // this.moveLeft();
+      // this.moveRight();
+    }
+   
+    
 }
+
 
 module.exports = Boomerang;

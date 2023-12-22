@@ -3,48 +3,48 @@
 // Главное не используй всё вместе!
 
 const keypress = require('keypress');
-const game = require ('../run')
+const Game = require ('./Game')
 
 // Управление.
 // Настроим соответствия нажатий на клавиши и действий в игре.
 
-const keyboard = {
-  q: () => game.hero.moveRight(),
-  w: () => console.log('w'),
-  e: () => console.log('e'),
-  r: () => console.log('r'),
-  t: () => console.log('t'),
-  y: () => console.log('y'),
-};
+// const keyboard = {
+//   q: () => game.hero.moveRight(),
+//   w: () => console.log('w'),
+//   e: () => console.log('e'),
+//   r: () => console.log('r'),
+//   t: () => console.log('t'),
+//   y: () => console.log('y'),
+// };
 
-// Какая-то функция.
+// // Какая-то функция.
 
-function runInteractiveConsole() {
-  keypress(process.stdin);
-  process.stdin.on('keypress', (ch, key) => {
-    if (key) {
-      // Вызывает команду, соответствующую нажатой кнопке.
-      if (key.name === 'd') {
-        // console.log('d');
-        game.hero.moveRight()
-      }
-      if (key.name === 'a') {
-        game.hero.moveLeft()
-      }
-      if (key.name === 'f') {
-        game.hero.attack()
-      }
-      // Прерывание программы.
-      if (key.ctrl && key.name === 'c') {
-        process.exit();
-      }
-    }
-  });
-  process.stdin.setRawMode(true);
-}
+// function runInteractiveConsole() {
+//   keypress(process.stdin);
+//   process.stdin.on('keypress', (ch, key) => {
+//     if (key) {
+//       // Вызывает команду, соответствующую нажатой кнопке.
+//       if (key.name === 'd') {
+//         Game.hero.moveRight()
+        
+//       }
+//       if (key.name === 'a') {
+//         Game.hero.moveLeft()
+//       }
+//       if (key.name === 'f') {
+//         Game.hero.attack()
+//       }
+//       // Прерывание программы.
+//       if (key.name === 'c') {
+//         process.exit();
+//       }
+//     }
+//   });
+//   process.stdin.setRawMode(true);
+// }
 
-// Давай попробуем запустить этот скрипт!
+// // Давай попробуем запустить этот скрипт!
 
-runInteractiveConsole();
+// runInteractiveConsole();
 
-module.exports = runInteractiveConsole
+// module.exports = runInteractiveConsole

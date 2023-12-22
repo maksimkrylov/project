@@ -1,4 +1,5 @@
 // Враг.
+const Boomerang = require ('./Boomerang')
 
 class Enemy {
   constructor() {
@@ -23,10 +24,14 @@ class Enemy {
   }
 
   die() {
-    if (this.position)
-    this.position = '?';
-    console.log('Enemy is dead!');
-  }
+    
+      console.log('Enemy is dead!');
+      
+    }
+    // this.position = '?';
+    
+
+  
 }
 
 module.exports = Enemy;

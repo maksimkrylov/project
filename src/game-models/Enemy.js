@@ -4,6 +4,7 @@ class Enemy {
   constructor() {
     this.generateSkin();
     this.position = 16;
+    this.moveLeft()
   }
 
   generateSkin() {
@@ -13,10 +14,16 @@ class Enemy {
 
   moveLeft() {
     // Идём влево.
-    this.position -= 1;
+    
+    setInterval(() => {
+      this.position -= 1;
+    }, 1000);
+   
+
   }
 
   die() {
+    if (this.position)
     this.position = '?';
     console.log('Enemy is dead!');
   }
